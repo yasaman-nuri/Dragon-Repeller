@@ -150,7 +150,7 @@ function update(location) {
 
 function buyHealth() {
   if (gold >= 10) {
-    gold -= -10;
+    gold -= 10;
     health += 10;
     goldText.innerText = gold;
     healthText.innerText = health;
@@ -182,7 +182,6 @@ function sellWeapon() {
   if (inventory.length > 1) {
     gold += 15;
     goldText.innerText = gold;
-    let currentWeapon;
     currentWeapon = inventory.shift();
     text.innerText = "You sold a " + currentWeapon + ".";
     text.innerText += " In your inventory you have: " + inventory;
